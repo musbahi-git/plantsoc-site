@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "tomato",
+    "name": "Tomato",
+    "type": "Vegetable",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-03-30",
+    "sunlight": "Full sun",
+    "soilType": "Loamy",
+    "companionPlants": [
+      "Basil",
+      "Marigold"
+    ],
+    "harvestTrimIntervalDays": 14,
+    "estimatedHarvestTrimDate": "2026-05-02",
+    "notes": "Stake early and keep fruit off wet soil.",
+    "lifeCycle": "Annual",
+    "location": "North Bed"
+  },
+  {
+    "slug": "carrot",
+    "name": "Carrot",
+    "type": "Root vegetable",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-02",
+    "sunlight": "Full sun",
+    "soilType": "Sandy",
+    "companionPlants": [
+      "Onion",
+      "Pea"
+    ],
+    "harvestTrimIntervalDays": 21,
+    "estimatedHarvestTrimDate": "2026-05-05",
+    "notes": "Thin for straight roots and consistent spacing.",
+    "lifeCycle": "Biennial",
+    "location": "South Bed"
+  },
+  {
+    "slug": "lavender",
+    "name": "Lavender",
+    "type": "Herb",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-10",
+    "sunlight": "Full sun",
+    "soilType": "Well-draining",
+    "companionPlants": [
+      "Rosemary",
+      "Sage"
+    ],
+    "harvestTrimIntervalDays": 28,
+    "estimatedHarvestTrimDate": "2026-05-08",
+    "notes": "Keep lightly pruned and avoid overwatering.",
+    "lifeCycle": "Perennial",
+    "location": "Herb Spiral"
+  },
+  {
+    "slug": "strawberry",
+    "name": "Strawberry",
+    "type": "Fruit",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-12",
+    "sunlight": "Full sun",
+    "soilType": "Loamy",
+    "companionPlants": [
+      "Spinach",
+      "Lettuce"
+    ],
+    "harvestTrimIntervalDays": 10,
+    "estimatedHarvestTrimDate": "2026-05-01",
+    "notes": "Mulch well to keep berries clean.",
+    "lifeCycle": "Perennial",
+    "location": "Berry Patch"
+  },
+  {
+    "slug": "pumpkin",
+    "name": "Pumpkin",
+    "type": "Vegetable",
+    "plantingSeason": "Summer",
+    "plantingDate": "2026-06-01",
+    "sunlight": "Full sun",
+    "soilType": "Rich",
+    "companionPlants": [
+      "Corn",
+      "Beans"
+    ],
+    "harvestTrimIntervalDays": 35,
+    "estimatedHarvestTrimDate": "2026-05-20",
+    "notes": "Leave plenty of room for vines to spread.",
+    "lifeCycle": "Annual",
+    "location": "South Edge"
+  },
+  {
+    "slug": "cucumber",
+    "name": "Cucumber",
+    "type": "Vegetable",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-18",
+    "sunlight": "Full sun",
+    "soilType": "Well-draining",
+    "companionPlants": [
+      "Beans",
+      "Sunflowers"
+    ],
+    "harvestTrimIntervalDays": 7,
+    "estimatedHarvestTrimDate": "2026-05-03",
+    "notes": "Train vertically to save space and improve airflow.",
+    "lifeCycle": "Annual",
+    "location": "North Bed"
+  },
+  {
+    "slug": "rocket-potato",
+    "name": "Rocket Potato",
+    "type": "Root vegetable",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-22",
+    "sunlight": "Full sun",
+    "soilType": "Sandy loam",
+    "companionPlants": [
+      "Beans",
+      "Cabbage"
+    ],
+    "harvestTrimIntervalDays": 21,
+    "estimatedHarvestTrimDate": "2026-04-30",
+    "notes": "Earth up regularly to keep tubers covered.",
+    "lifeCycle": "Annual",
+    "location": "Potato Trench"
+  },
+  {
+    "slug": "king-edward-potato",
+    "name": "King Edward Potato",
+    "type": "Root vegetable",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-22",
+    "sunlight": "Full sun",
+    "soilType": "Sandy loam",
+    "companionPlants": [
+      "Beans",
+      "Cabbage"
+    ],
+    "harvestTrimIntervalDays": 21,
+    "estimatedHarvestTrimDate": "2026-05-04",
+    "notes": "Check foliage for blight after wet weather.",
+    "lifeCycle": "Annual",
+    "location": "Potato Trench"
+  },
+  {
+    "slug": "onion",
+    "name": "Onion",
+    "type": "Vegetable",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-19",
+    "sunlight": "Full sun",
+    "soilType": "Loamy",
+    "companionPlants": [
+      "Carrot",
+      "Lettuce"
+    ],
+    "harvestTrimIntervalDays": 14,
+    "estimatedHarvestTrimDate": "2026-05-06",
+    "notes": "Keep weed-free for strong bulb development.",
+    "lifeCycle": "Annual",
+    "location": "South Bed"
+  },
+  {
+    "slug": "basil",
+    "name": "Basil",
+    "type": "Herb",
+    "plantingSeason": "Late spring",
+    "plantingDate": "2026-04-26",
+    "sunlight": "Full sun",
+    "soilType": "Rich",
+    "companionPlants": [
+      "Tomato",
+      "Pepper"
+    ],
+    "harvestTrimIntervalDays": 7,
+    "estimatedHarvestTrimDate": "2026-04-29",
+    "notes": "Pinch tops regularly to encourage bushy growth.",
+    "lifeCycle": "Annual",
+    "location": "Herb Spiral"
+  }
+]

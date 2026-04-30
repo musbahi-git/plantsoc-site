@@ -1,0 +1,12 @@
+[
+  {
+    "id": "388e970d-2e6e-487b-ac5c-3c39aca8506f",
+    "name": "Test User",
+    "contact": "test@example.com",
+    "category": "Planting idea",
+    "area": "North Bed",
+    "message": "Add marigolds near the tomato row.",
+    "submittedAt": "2026-04-29T11:14:32.357Z",
+    "status": "New"
+  }
+]
