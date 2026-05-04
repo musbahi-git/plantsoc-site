@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
 import { AppHeader } from "@/components/app-header";
 import "./globals.css";
-
-const bodyFont = Manrope({
-  variable: "--font-body",
-  subsets: ["latin"],
-});
-
-const displayFont = Fraunces({
-  variable: "--font-display",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "PlantSoc & Community Allotment",
   description:
-    "A mobile-first community allotment dashboard for plants, harvests, tasks, and suggestions.",
+    "A mobile-first community allotment dashboard for plants, harvests, tasks, and suggestions. Low-tech version.",
 };
 
 export default function RootLayout({
@@ -25,11 +14,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${displayFont.variable} h-full antialiased`}>
-      <body className="min-h-full bg-background font-sans text-foreground">
+    <html lang="en" className="h-full">
+      <body className="min-h-full font-serif bg-yellow-50 text-black">
         <div className="relative flex min-h-screen flex-col">
           <AppHeader />
-          <main className="mx-auto flex w-full max-w-6xl flex-1 px-4 pb-12 pt-4 sm:px-6 lg:px-8">
+          <main className="mx-auto flex w-full max-w-4xl flex-1 px-4 pb-12 pt-4 border-l border-r border-black/10">
             {children}
           </main>
         </div>

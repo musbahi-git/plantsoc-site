@@ -18,82 +18,46 @@ const secondaryNavigation = [
   { href: "/committee", label: "PlantSoc Committee" },
 ];
 
-function isActivePath(pathname: string, href: string) {
-  if (href === "/") {
-    return pathname === "/";
-  }
-
-  return pathname === href || pathname.startsWith(`${href}/`);
-}
-
 export function AppHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto w-full max-w-6xl px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <Link href="/" className="flex items-center gap-3 transition hover:opacity-90">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-950 text-sm font-semibold text-white">
-              PS
-            </span>
-            <span className="flex flex-col leading-tight">
-              <span className="font-display text-lg text-foreground">PlantSoc</span>
-              <span className="text-xs text-slate-500">Community allotment</span>
-            </span>
-          </Link>
-
-          <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium text-slate-600">
-            {primaryNavigation.map((link) => {
-              const active = isActivePath(pathname, link.href);
-
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`transition ${
-                    active
-                      ? "text-foreground underline decoration-emerald-950/20 underline-offset-4"
-                      : "hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link
-              href="/admin"
-              className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-foreground transition hover:border-slate-300"
-            >
-              Admin
+    <header className="border-b border-black bg-[#fffdf2] py-2 mb-4">
+      <div className="mx-auto w-full max-w-4xl px-4">
+        <div className="flex flex-col gap-2">
+          <div className="flex justify-between items-baseline border-b border-black pb-2 mb-2">
+            <Link href="/" className="text-xl font-bold italic">
+              PlantSoc: Community Allotment
             </Link>
-
-            <details className="relative">
-              <summary className="cursor-pointer list-none rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-foreground transition hover:border-slate-300">
-                More
-              </summary>
-              <div className="absolute right-0 mt-2 w-56 rounded-2xl border border-slate-200 bg-white p-2 shadow-lg shadow-slate-200/60">
-                {secondaryNavigation.map((link) => {
-                  const active = isActivePath(pathname, link.href);
-
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={`block rounded-xl px-3 py-2 text-sm transition ${
-                        active ? "bg-emerald-50 text-foreground" : "text-slate-600 hover:bg-slate-50 hover:text-foreground"
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
-                  );
-                })}
-              </div>
-            </details>
+            <span className="text-xs font-mono">BATTERY: 62%</span>
           </div>
+
+          <nav className="text-sm font-mono flex flex-wrap gap-4">
+            <ul className="flex flex-wrap gap-4 m-0 p-0 list-none">
+              {primaryNavigation.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <li><Link href="/admin">Admin</Link></li>
+              <li>
+                <details className="relative inline-block cursor-pointer">
+                  <summary className="font-bold underline decoration-dotted">More Links...</summary>
+                  <ul className="absolute top-full left-0 border border-black bg-[#fffdf2] mt-1 p-2 w-48 z-50 m-0 list-none shadow-sm">
+                    {secondaryNavigation.map((link) => (
+                      <li key={link.href} className="mb-1 last:mb-0">
+                        <Link href={link.href} className="block whitespace-nowrap overflow-hidden text-ellipsis">
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>

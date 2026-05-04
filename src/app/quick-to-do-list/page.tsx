@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Badge, Card, SectionHeading, StatCard } from "@/components/ui";
+import { Badge, Card, StatCard } from "@/components/ui";
 import { formatDate, quickTodos } from "@/lib/site-data";
+import { WorkSubmissionForm } from "@/components/work-submission-form";
 
 export const metadata = {
   title: "Quick To Do List | PlantSoc & Community Allotment",
@@ -8,51 +9,83 @@ export const metadata = {
 
 export default function QuickToDoListPage() {
   const openCount = quickTodos.filter((task) => task.status !== "Done").length;
+  const doingCount = quickTodos.filter((task) => task.status === "Doing").length;
 
   return (
     <div className="w-full space-y-8 pb-10">
-      <section className="rounded-[32px] border border-emerald-950/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.92)_0%,rgba(244,236,221,0.95)_100%)] p-6 shadow-[0_24px_80px_rgba(19,38,31,0.08)] sm:p-8">
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-          <div className="space-y-3">
-            <Badge tone="emerald">Small jobs</Badge>
-            <h1 className="font-display text-4xl leading-none text-foreground sm:text-5xl">Quick To Do List</h1>
-            <p className="max-w-2xl text-base leading-7 text-emerald-950/70 sm:text-lg">
-              The short-form work queue for planting, repairs, and prep tasks that should stay visible at a glance.
-            </p>
-          </div>
-          <Link href="/projects-big-to-dos" className="inline-flex items-center justify-center rounded-full border border-emerald-950/10 bg-white/85 px-5 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-white">Longer projects</Link>
+      <section className="space-y-5 pt-2">
+        <Badge tone="emerald">Quick access</Badge>
+        <div className="max-w-3xl space-y-3">
+          <h1 className="font-display text-4xl leading-none tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Quick To Do List
+          </h1>
+          <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+            Small jobs, simple submission, and one readable page for fast site work.
+          </p>
         </div>
+        <nav className="flex flex-wrap gap-3 text-sm font-medium">
+          <a href="#submit" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+            Submit a task
+          </a>
+          <a href="#tasks" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+            View current tasks
+          </a>
+          <Link href="/projects-big-to-dos" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+            Longer projects
+          </Link>
+        </nav>
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">
         <StatCard label="Open items" value={openCount.toString()} detail="Tasks that still need action or assignment." />
-        <StatCard label="Doing now" value={quickTodos.filter((task) => task.status === "Doing").length.toString()} detail="Items currently underway on the site." />
+        <StatCard label="Doing now" value={doingCount.toString()} detail="Items currently underway on the site." />
         <StatCard label="Due this week" value={quickTodos.filter((task) => new Date(task.due).getTime() <= new Date(2026, 4, 5).getTime()).length.toString()} detail="Seed tasks that should move quickly." />
       </section>
 
-      <Card className="p-6 sm:p-7">
-        <SectionHeading
-          eyebrow="Task board"
-          title="What needs doing next"
-          description="These items stay short and specific so they can be completed without opening a larger project page."
-        />
+      <Card id="submit" className="p-6 sm:p-7">
+        <div className="max-w-3xl space-y-3">
+          <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-slate-500">Submit</p>
+          <h2 className="font-display text-2xl leading-tight text-foreground sm:text-[2rem]">
+            Send a small job
+          </h2>
+          <p className="text-sm leading-6 text-slate-600">
+            This goes to the admin inbox as a task-sized suggestion.
+          </p>
+        </div>
+        <div className="mt-6">
+          <WorkSubmissionForm
+            category="Maintenance task"
+            area="Quick To Do List"
+            submitLabel="Submit task"
+            prompt="Keep it short. A title and one detail note is enough."
+          />
+        </div>
+      </Card>
 
-        <div className="mt-6 grid gap-4 xl:grid-cols-2">
+      <Card id="tasks" className="p-5 sm:p-6">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="text-[11px] font-medium uppercase tracking-[0.22em] text-slate-500">Current tasks</p>
+            <h2 className="font-display text-2xl leading-tight text-foreground sm:text-[2rem]">What needs doing next</h2>
+          </div>
+          <Badge tone="slate">{quickTodos.length} items</Badge>
+        </div>
+
+        <div className="mt-4 divide-y divide-slate-200">
           {quickTodos.map((task) => (
-            <div key={task.id} className="rounded-[28px] border border-emerald-950/10 bg-white/80 p-5 shadow-[0_16px_44px_rgba(18,34,28,0.05)]">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="font-display text-2xl text-foreground">{task.title}</p>
-                  <p className="text-sm text-emerald-950/60">{task.owner}</p>
-                </div>
-                <Badge tone={task.status === "Waiting" ? "amber" : task.status === "Done" ? "emerald" : "slate"}>{task.status}</Badge>
+            <article key={task.id} className="flex flex-col gap-3 py-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p className="font-medium text-foreground">{task.title}</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">{task.detail}</p>
+                <p className="mt-2 text-xs text-slate-500">{task.owner}</p>
               </div>
-              <p className="mt-4 text-sm leading-6 text-emerald-950/70">{task.detail}</p>
-              <div className="mt-4 flex items-center justify-between gap-4 rounded-2xl border border-emerald-950/10 bg-emerald-50/70 px-4 py-3 text-sm text-emerald-950/70">
-                <span>Due</span>
-                <span className="font-medium text-foreground">{formatDate(task.due)}</span>
+              <div className="flex items-center gap-3 sm:justify-end">
+                <Badge tone={task.status === "Waiting" ? "amber" : task.status === "Done" ? "emerald" : "slate"}>
+                  {task.status}
+                </Badge>
+                <span className="text-sm text-slate-600">{formatDate(task.due)}</span>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </Card>
