@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 
 export const ADMIN_COOKIE_NAME = "plantsoc_admin_session";
-export const ADMIN_ACCESS_KEY = process.env.ADMIN_ACCESS_KEY ?? "plantsoc-demo";
+export const ADMIN_ACCESS_KEY = process.env.ADMIN_ACCESS_KEY;
 export const ADMIN_SESSION_MAX_AGE_SECONDS = 60 * 60 * 8;
 
 export async function isAdminUnlocked() {
