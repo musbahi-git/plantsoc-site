@@ -23,13 +23,13 @@ export default function ProjectsPage() {
           </p>
         </div>
         <nav className="flex flex-wrap gap-3 text-sm font-medium">
-          <a href="#submit" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+          <a href="#submit" className=" border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
             Submit a project
           </a>
-          <a href="#lanes" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+          <a href="#lanes" className=" border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
             View project lanes
           </a>
-          <Link href="/quick-to-do-list" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+          <Link href="/quick-to-do-list" className=" border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
             Quick To Do List
           </Link>
         </nav>
@@ -73,7 +73,7 @@ export default function ProjectsPage() {
           {projectSections.map((section, index) => (
             <details
               key={section.title}
-              className="rounded-2xl border border-slate-200 bg-white px-4 py-3"
+              className=" border border-slate-200 bg-white px-4 py-3"
               open={index === 0}
             >
               <summary className="cursor-pointer list-none">
@@ -87,7 +87,7 @@ export default function ProjectsPage() {
               </summary>
               <ul className="mt-4 space-y-3 border-t border-slate-200 pt-4">
                 {section.items.map((item) => (
-                  <li key={item.title} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                  <li key={item.title} className=" border border-slate-200 bg-slate-50 px-4 py-3">
                     <p className="font-medium text-foreground">{item.title}</p>
                     <p className="mt-1 text-sm leading-6 text-slate-600">{item.note}</p>
                   </li>

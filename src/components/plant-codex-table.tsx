@@ -62,7 +62,7 @@ export function PlantCodexTable({ plants }: PlantCodexTableProps) {
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Search by plant, companion, note, or location"
-              className="w-full rounded-2xl border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-emerald-950/35 focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
+              className=" border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-emerald-950/35 focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
             />
           </label>
 
@@ -71,7 +71,7 @@ export function PlantCodexTable({ plants }: PlantCodexTableProps) {
             <select
               value={typeFilter}
               onChange={(event) => setTypeFilter(event.target.value)}
-              className="w-full rounded-2xl border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
+              className=" border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
             >
               {typeOptions.map((option) => (
                 <option key={option} value={option}>
@@ -86,7 +86,7 @@ export function PlantCodexTable({ plants }: PlantCodexTableProps) {
             <select
               value={locationFilter}
               onChange={(event) => setLocationFilter(event.target.value)}
-              className="w-full rounded-2xl border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
+              className="border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
             >
               {locationOptions.map((option) => (
                 <option key={option} value={option}>
@@ -108,7 +108,7 @@ export function PlantCodexTable({ plants }: PlantCodexTableProps) {
               setTypeFilter("All types");
               setLocationFilter("All locations");
             }}
-            className="rounded-full border border-emerald-950/10 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:bg-emerald-100"
+            className=" border border-emerald-950/10 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:bg-emerald-100"
           >
             Clear filters
           </button>

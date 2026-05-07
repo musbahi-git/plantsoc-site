@@ -53,7 +53,7 @@ export function SuggestionForm() {
           <input
             value={name}
             onChange={(event) => setName(event.target.value)}
-            className="w-full rounded-2xl border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-emerald-950/35 focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
+            className="w-full  border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-emerald-950/35 focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
             placeholder="Anonymous or your name"
           />
         </label>
@@ -67,7 +67,7 @@ export function SuggestionForm() {
           name="message"
           required
           rows={6}
-          className="w-full rounded-[24px] border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-emerald-950/35 focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
+          className="w-full border border-emerald-950/10 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-emerald-950/35 focus:border-emerald-950/25 focus:ring-2 focus:ring-emerald-950/10"
           placeholder="Share the crop, task, or improvement you want the allotment team to review."
         />
       </label>
@@ -79,20 +79,20 @@ export function SuggestionForm() {
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="inline-flex items-center justify-center rounded-full bg-emerald-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-70"
+          className="inline-flex items-center justify-center  bg-emerald-950 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {state === "submitting" ? "Sending..." : "Submit suggestion"}
         </button>
       </div>
 
       {state === "success" ? (
-        <p className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
+        <p className=" border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
           Thanks. Your suggestion was sent and is waiting in the review queue: {message}
         </p>
       ) : null}
 
       {state === "error" ? (
-        <p className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800">
+        <p className=" border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800">
           {error}
         </p>
       ) : null}

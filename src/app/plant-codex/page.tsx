@@ -29,13 +29,13 @@ export default function PlantCodexPage() {
         <div className="flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-foreground transition hover:border-slate-300"
+            className="inline-flex items-center justify-center  border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-foreground transition hover:border-slate-300"
           >
             Back to dashboard
           </Link>
           <Link
             href="/admin#plant-manager"
-            className="inline-flex items-center justify-center rounded-full bg-emerald-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-900"
+            className="inline-flex items-center justify-center  bg-emerald-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-900"
           >
             Add new plant
           </Link>

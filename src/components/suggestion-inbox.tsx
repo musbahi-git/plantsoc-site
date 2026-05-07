@@ -44,7 +44,7 @@ export function SuggestionInbox({ suggestions }: SuggestionInboxProps) {
   return (
     <div className="space-y-4">
       {suggestions.map((suggestion) => (
-        <div key={suggestion.id} className="rounded-[28px] border border-emerald-950/10 bg-white/80 p-5">
+        <div key={suggestion.id} className=" border border-emerald-950/10 bg-white/80 p-5">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p className="text-sm text-emerald-950/60">
@@ -67,7 +67,7 @@ export function SuggestionInbox({ suggestions }: SuggestionInboxProps) {
                 type="button"
                 onClick={() => updateStatus(suggestion.id, status)}
                 disabled={pendingId === suggestion.id && isPending}
-                className="rounded-full border border-emerald-950/10 bg-emerald-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-950 transition hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-70"
+                className=" border border-emerald-950/10 bg-emerald-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-950 transition hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {status}
               </button>

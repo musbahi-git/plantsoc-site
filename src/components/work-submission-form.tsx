@@ -63,7 +63,7 @@ export function WorkSubmissionForm({ category, area, submitLabel, prompt }: Work
             value={title}
             onChange={(event) => setTitle(event.target.value)}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className="w-full  border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             placeholder="Fix bench"
           />
         </label>
@@ -75,7 +75,7 @@ export function WorkSubmissionForm({ category, area, submitLabel, prompt }: Work
             onChange={(event) => setDetails(event.target.value)}
             required
             rows={4}
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className="w-full  border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             placeholder="Add the context, location, or follow-up note."
           />
         </label>
@@ -86,20 +86,20 @@ export function WorkSubmissionForm({ category, area, submitLabel, prompt }: Work
         <button
           type="submit"
           disabled={state === "submitting"}
-          className="rounded-full bg-emerald-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-70"
+          className=" bg-emerald-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {state === "submitting" ? "Submitting..." : submitLabel}
         </button>
       </div>
 
       {state === "success" ? (
-        <p className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900" aria-live="polite">
+        <p className=" border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900" aria-live="polite">
           Submitted. It is now waiting in the admin review inbox.
         </p>
       ) : null}
 
       {state === "error" ? (
-        <p className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800" aria-live="polite">
+        <p className=" border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800" aria-live="polite">
           {error}
         </p>
       ) : null}

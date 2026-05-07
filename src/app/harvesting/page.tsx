@@ -26,7 +26,7 @@ export default function HarvestingPage() {
         </div>
         <Link
           href="/plant-codex"
-          className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-foreground transition hover:border-slate-300"
+          className="inline-flex items-center justify-center -full border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-foreground transition hover:border-slate-300"
         >
           View plant codex
         </Link>

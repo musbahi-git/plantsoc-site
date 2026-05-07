@@ -39,9 +39,9 @@ export default function SuggestionsPage() {
             description="Simple notes are easier to review and turn into work."
           />
           <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-600">
-            <li className="rounded-2xl border border-slate-200 bg-white px-4 py-3">Planting ideas for beds, borders, and the herb spiral.</li>
-            <li className="rounded-2xl border border-slate-200 bg-white px-4 py-3">Maintenance work that should move into the todo list.</li>
-            <li className="rounded-2xl border border-slate-200 bg-white px-4 py-3">Events, workshops, or safety improvements for the site.</li>
+            <li className="-2xl border border-slate-200 bg-white px-4 py-3">Planting ideas for beds, borders, and the herb spiral.</li>
+            <li className="-2xl border border-slate-200 bg-white px-4 py-3">Maintenance work that should move into the todo list.</li>
+            <li className="-2xl border border-slate-200 bg-white px-4 py-3">Events, workshops, or safety improvements for the site.</li>
           </ul>
         </Card>
       </section>

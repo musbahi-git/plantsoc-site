@@ -16,7 +16,7 @@ export default function CommitteePage() {
             PlantSoc Committee
           </h1>
           <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-            The people and responsibilities that keep the allotment running.
+            The people and responsibilities that keep PlantSoc & the allotment running.
           </p>
         </div>
       </section>
@@ -50,9 +50,9 @@ export default function CommitteePage() {
           description="Use the primary dashboard and task pages before adding more moving pieces."
         />
         <div className="mt-5 flex flex-wrap gap-3 text-sm font-medium">
-          <Link href="/projects-big-to-dos" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">Projects</Link>
-          <Link href="/quick-to-do-list" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">Quick To Do List</Link>
-          <Link href="/admin" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">Admin workspace</Link>
+          <Link href="/projects-big-to-dos" className="-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">Projects</Link>
+          <Link href="/quick-to-do-list" className="-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">Quick To Do List</Link>
+          <Link href="/admin" className="-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">Admin workspace</Link>
         </div>
       </Card>
     </div>

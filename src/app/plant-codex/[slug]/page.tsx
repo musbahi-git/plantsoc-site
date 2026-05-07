@@ -45,7 +45,7 @@ export default async function PlantDetailPage({
 
   return (
     <div className="w-full space-y-8 pb-10">
-      <section className="rounded-[32px] border border-emerald-950/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.94)_0%,rgba(244,235,220,0.96)_100%)] p-6 shadow-[0_24px_80px_rgba(19,38,31,0.08)] sm:p-8">
+      <section className="border border-emerald-950/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.94)_0%,rgba(244,235,220,0.96)_100%)] p-6 shadow-[0_24px_80px_rgba(19,38,31,0.08)] sm:p-8">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3">
             <Badge tone="emerald">Plant detail</Badge>
@@ -56,7 +56,7 @@ export default async function PlantDetailPage({
           </div>
           <Link
             href="/plant-codex"
-            className="inline-flex items-center justify-center rounded-full border border-emerald-950/10 bg-white/85 px-5 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-white"
+            className="inline-flex items-center justify-center -full border border-emerald-950/10 bg-white/85 px-5 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-white"
           >
             Back to codex
           </Link>
@@ -87,31 +87,31 @@ export default async function PlantDetailPage({
           <SectionHeading
             eyebrow="Record summary"
             title="All of the tracked properties"
-            description="This page mirrors the Notion entry shape so the data can later connect to edit forms and database persistence."
+            description="This page data can later connect to edit forms and database persistence."
           />
 
           <dl className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-emerald-950/10 bg-white/80 p-4">
+            <div className="-2xl border border-emerald-950/10 bg-white/80 p-4">
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950/45">Planting date</dt>
               <dd className="mt-2 text-base font-medium text-foreground">{formatDate(plant.plantingDate)}</dd>
             </div>
-            <div className="rounded-2xl border border-emerald-950/10 bg-white/80 p-4">
+            <div className="-2xl border border-emerald-950/10 bg-white/80 p-4">
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950/45">Sunlight</dt>
               <dd className="mt-2 text-base font-medium text-foreground">{plant.sunlight}</dd>
             </div>
-            <div className="rounded-2xl border border-emerald-950/10 bg-white/80 p-4">
+            <div className="-2xl border border-emerald-950/10 bg-white/80 p-4">
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950/45">Soil type</dt>
               <dd className="mt-2 text-base font-medium text-foreground">{plant.soilType}</dd>
             </div>
-            <div className="rounded-2xl border border-emerald-950/10 bg-white/80 p-4">
+            <div className="-2xl border border-emerald-950/10 bg-white/80 p-4">
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950/45">Life cycle</dt>
               <dd className="mt-2 text-base font-medium text-foreground">{plant.lifeCycle}</dd>
             </div>
-            <div className="rounded-2xl border border-emerald-950/10 bg-white/80 p-4">
+            <div className="-2xl border border-emerald-950/10 bg-white/80 p-4">
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950/45">Harvest interval</dt>
               <dd className="mt-2 text-base font-medium text-foreground">{plant.harvestTrimIntervalDays} days</dd>
             </div>
-            <div className="rounded-2xl border border-emerald-950/10 bg-white/80 p-4">
+            <div className="-2xl border border-emerald-950/10 bg-white/80 p-4">
               <dt className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-950/45">Placement</dt>
               <dd className="mt-2 text-base font-medium text-foreground">{plant.location}</dd>
             </div>
@@ -126,12 +126,12 @@ export default async function PlantDetailPage({
           />
           <div className="mt-6 flex flex-wrap gap-2">
             {plant.companionPlants.map((companion) => (
-              <span key={companion} className="rounded-full border border-emerald-950/10 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-950/75">
+              <span key={companion} className="-full border border-emerald-950/10 bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-950/75">
                 {companion}
               </span>
             ))}
           </div>
-          <div className="mt-8 rounded-3xl border border-emerald-950/10 bg-amber-50/70 p-5 text-sm leading-6 text-emerald-950/70">
+          <div className="mt-8 -3xl border border-emerald-950/10 bg-amber-50/70 p-5 text-sm leading-6 text-emerald-950/70">
             This detail route is generated from the same source record as the table view, so it can later support inline editing without changing the route structure.
           </div>
         </Card>

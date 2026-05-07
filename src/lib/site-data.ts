@@ -374,27 +374,27 @@ export type CommitteeRole = {
 
 export const committeeRoles: CommitteeRole[] = [
   {
-    title: "Chair",
-    lead: "Site coordination",
-    cadence: "Weekly review",
-    note: "Keeps the plan moving and resolves decisions that affect the whole plot.",
+    title: "President",
+    lead: "Tom",
+    cadence: "uniemail(at)leeds.ac.uk",
+    note: "Keeps the plan moving and resolves decisions that affect the whole plo and community.",
   },
   {
     title: "Secretary",
-    lead: "Records and action notes",
-    cadence: "After each meeting",
-    note: "Captures actions, links, and follow-up items for the next session.",
+    lead: "Person B",
+    cadence: "uniemail(at)leeds.ac.uk",
+    note: "Captures actions and follow-up items for the next session.",
   },
   {
-    title: "Volunteer coordinator",
-    lead: "Rota and signups",
-    cadence: "As needed",
-    note: "Matches people with jobs, events, and seasonal work sessions.",
+    title: "Events Coordinator",
+    lead: "Person C",
+    cadence: "uniemail(at)leeds.ac.uk",
+    note: "Matches people with events and seasonal work sessions.",
   },
   {
-    title: "Maintenance lead",
-    lead: "Tools and repairs",
-    cadence: "Fortnightly check-in",
+    title: "Maintenance Coordinator",
+    lead: "Person D",
+    cadence: "uniemail(at)leeds.ac.uk",
     note: "Tracks equipment, repairs benches, and keeps shared tools ready to use.",
   },
 ];

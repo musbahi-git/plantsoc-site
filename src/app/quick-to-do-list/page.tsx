@@ -24,13 +24,13 @@ export default function QuickToDoListPage() {
           </p>
         </div>
         <nav className="flex flex-wrap gap-3 text-sm font-medium">
-          <a href="#submit" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+          <a href="#submit" className=" border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
             Submit a task
           </a>
-          <a href="#tasks" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+          <a href="#tasks" className=" border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
             View current tasks
           </a>
-          <Link href="/projects-big-to-dos" className="rounded-full border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
+          <Link href="/projects-big-to-dos" className="border border-slate-200 bg-white px-4 py-2 text-foreground transition hover:border-slate-300">
             Longer projects
           </Link>
         </nav>

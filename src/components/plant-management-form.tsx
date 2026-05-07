@@ -146,7 +146,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             name="name"
             defaultValue={plant?.name ?? ""}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className="-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             placeholder="Tomato"
           />
         </label>
@@ -157,7 +157,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             name="type"
             defaultValue={plant?.type ?? ""}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className="-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             placeholder="Vegetable"
           />
         </label>
@@ -169,7 +169,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             type="date"
             defaultValue={plant?.plantingDate ?? ""}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className=" border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
           />
         </label>
 
@@ -180,7 +180,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             type="date"
             defaultValue={plant?.estimatedHarvestTrimDate ?? ""}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className="-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
           />
         </label>
 
@@ -191,7 +191,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             defaultValue={plant?.notes ?? ""}
             rows={4}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className="-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             placeholder="Short guidance for the site team"
           />
         </label>
@@ -202,7 +202,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             name="location"
             defaultValue={plant?.location ?? locationRecords[0]?.name}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+            className=" border border-slate-200 bg-white px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
           >
             {locationRecords.map((location) => (
               <option key={location.slug} value={location.name}>
@@ -213,7 +213,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
         </label>
       </div>
 
-      <details className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
+      <details className=" border-slate-200 bg-white px-4 py-3">
         <summary className="cursor-pointer list-none text-sm font-medium text-foreground">
           More details
         </summary>
@@ -224,7 +224,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
               name="plantingSeason"
               defaultValue={plantingSeasonValue}
               required
-              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+              className=" border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             />
           </label>
 
@@ -237,7 +237,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
               step="1"
               defaultValue={harvestTrimIntervalDaysValue}
               required
-              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+              className=" border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
             />
           </label>
 
@@ -247,7 +247,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
               name="sunlight"
               defaultValue={sunlightValue}
               required
-              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+              className=" border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
               placeholder="Full sun"
             />
           </label>
@@ -258,7 +258,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
               name="soilType"
               defaultValue={soilTypeValue}
               required
-              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+              className=" border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
               placeholder="Loamy"
             />
           </label>
@@ -268,7 +268,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
             <input
               name="companionPlants"
               defaultValue={companionPlantsValue}
-              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+              className=" border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
               placeholder="Basil, Marigold"
             />
           </label>
@@ -279,7 +279,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
               name="lifeCycle"
               defaultValue={lifeCycleValue}
               required
-              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
+              className=" border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-foreground outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-2 focus:ring-slate-200"
               placeholder="Annual"
             />
           </label>
@@ -298,7 +298,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
               type="button"
               onClick={handleDelete}
               disabled={isSubmitting}
-              className="rounded-full border border-rose-200 bg-white px-5 py-3 text-sm font-medium text-rose-700 transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-70"
+              className=" border border-rose-200 bg-white px-5 py-3 text-sm font-medium text-rose-700 transition hover:bg-rose-50 disabled:cursor-not-allowed disabled:opacity-70"
             >
               Delete
             </button>
@@ -306,7 +306,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="rounded-full bg-emerald-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-70"
+            className=" bg-emerald-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-900 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {isSubmitting ? "Saving..." : mode === "create" ? "Create plant" : "Save changes"}
           </button>
@@ -314,7 +314,7 @@ export function PlantManagementForm({ mode, plant }: PlantManagementFormProps) {
       </div>
 
       {error ? (
-        <p className="rounded-2xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800">
+        <p className=" border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-800">
           {error}
         </p>
       ) : null}

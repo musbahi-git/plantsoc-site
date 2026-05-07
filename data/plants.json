@@ -1,5 +1,20 @@
 [
   {
+    "slug": "strawberries",
+    "name": "Strawberries",
+    "type": "Fruit",
+    "plantingSeason": "Spring",
+    "plantingDate": "2026-04-02",
+    "sunlight": "Full sun",
+    "soilType": "Loamy",
+    "companionPlants": [],
+    "harvestTrimIntervalDays": 120,
+    "estimatedHarvestTrimDate": "2026-10-19",
+    "notes": "depending on variety - early, mid-season, or day-neutral/everbearing types",
+    "lifeCycle": "Annual",
+    "location": "North Bed"
+  },
+  {
     "slug": "tomato",
     "name": "Tomato",
     "type": "Vegetable",

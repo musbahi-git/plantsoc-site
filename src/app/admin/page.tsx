@@ -22,7 +22,7 @@ export default async function AdminPage() {
 
   return (
     <div className="w-full space-y-8 pb-10">
-      <section className="rounded-[32px] border border-emerald-950/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.95)_0%,rgba(237,244,229,0.98)_100%)] p-6 shadow-[0_24px_80px_rgba(19,38,31,0.10)] sm:p-8">
+      <section className=" border p-6 shadow-[0_24px_80px_rgba(19,38,31,0.10)] sm:p-8">
         <div className="space-y-3">
           <Badge tone="slate">Private workspace</Badge>
           <h1 className="font-display text-4xl leading-none text-foreground sm:text-5xl">
